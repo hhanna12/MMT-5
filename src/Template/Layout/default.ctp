@@ -103,9 +103,8 @@ $cakeDescription = 'MMT';
 			if ( !($supervisor) ) {
 			$notifquery = Cake\ORM\TableRegistry::get('Notifications')->find()
 						->select(['comment_id', 'weeklyreport_id'])
-					  //->distinct(['weeklyreport_id'])
+					    ->distinct(['weeklyreport_id', 'comment_id'])
 						->where(['member_id =' => $memid[0]->id])
-						->group (['weeklyreport_id'])
 						->toArray();
 			
 			// supervisors need looping to get notifications with all their member ID's
