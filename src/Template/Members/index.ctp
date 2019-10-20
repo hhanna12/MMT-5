@@ -45,7 +45,7 @@
                     }
                 }
                 else {
-                    $sum = "";
+                    $sum = 0;
                 }
                 $total += $sum;?>
 
