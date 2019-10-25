@@ -455,7 +455,7 @@ class ProjectsController extends AppController
         // supervisors can edit their own projects
         if ($this->request->action === 'edit' || $this->request->action === 'delete' ) 
         {
-            if($project_role == "supervisor" || $project_role == "admin"){
+            if($project_role == "supervisor" || $project_role == "admin" || $project_role == "manager"){
                 return True;
             }
         }
